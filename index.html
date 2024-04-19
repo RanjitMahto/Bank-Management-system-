@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ccbdbd;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #c5d5df;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-flexbox;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            text-decoration: none;
+            padding: 0;
+            align-items: center;
+            text-align: center;
+            
+        }
+        
+
+        li {
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 25px;
+           
+        }
+        .creat-account-link:hover{
+            color: brown;
+        }
+        .list{
+            background-color: #d3efd4;
+            width: 760px;
+            display: flex;
+            justify-content: center;
+          border-radius: 20px;
+        }
+        .list:hover{
+           
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .btn{
+            background-color: white;
+            height: 250px;
+            border-radius: 5px;
+        }
+        .btn:hover{
+            background-color: #dfe4df;
+        }
+        a{
+            color: #141111;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Management System</h1>
+        <div class="list">
+        <ul>
+           
+             <!-- <button><li><a href="#" id="create-account-link">Create New Account</a></li></button>
+            <button><li><a href="#" id="show-all-account-link">Show All Accounts</a></li></button>
+              <button><li><a href="#" id="search-account-link">Search Account</a></li></button>
+              <button><li><a href="#" id="deposit-money-link">Deposit Money</a></li></button>
+              <button><li><a href="#" id="withdraw-money-link">Withdraw Money</a></li></button>
+              <button><li><a href="#" id="exit-link">Exit</a></li> -->
+                  <button class="btn"><li><a href="#" id="create-account-link">Create New Account</a></li>
+            <li><a href="#" id="show-all-account-link">Show All Accounts</a></li>
+              <li><a href="#" id="search-account-link">Search Account</a></li>
+              <li><a href="#" id="deposit-money-link">Deposit Money</a></li>
+             <li><a href="#" id="withdraw-money-link">Withdraw Money</a></li>
+             <li><a href="#" id="exit-link">Exit</a></li> </button>
+        </ul>
+    </div>
+        
+        <div id="account-details" style="display: none;">
+            <h2>Account Details</h2>
+            <table id="account-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Account Number</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody id="account-table-body">
+                    <!-- Account details will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
